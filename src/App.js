@@ -1,10 +1,10 @@
-import Test from './components/Test'
+import Header from './components/Header'
 import './css/App.css'
 
 export default function App() {
   return (
     <>
-      <Test />
+      <Header oyun="Civilization 6" />
     </>
   )
 }
