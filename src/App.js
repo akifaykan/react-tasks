@@ -1,10 +1,10 @@
-import React from 'react'
-import Test from './Test'
+import Test from './components/Test'
+import './css/App.css'
 
 export default function App() {
   return (
-    <div>
+    <>
       <Test />
-    </div>
+    </>
   )
 }
