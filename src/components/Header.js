@@ -1,33 +1,32 @@
 import Button from './Button';
 import PropTypes from 'prop-types';
+import { useLocation } from 'react-router-dom';
 
-const Header = ({ game }) => {
-    const name = 'Mehmet Akif';
-    const x = true;
-    const buttonClick = () => {
-        console.log('click');
-    };
+const Header = ({ title, onAdd, showAdd }) => {
+    const location = useLocation();
 
     return (
         <header className="header">
-            {/* <h1>H1 Başlığı</h1>
-            <h2>{name + ' ' + (x ? 'Aykan' : 'Demir')}</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <h2>{game}</h2> */}
-            <h1 className="gamelist">Oyun Listesi</h1>
-            <Button text="OYUN EKLE" color="#000" click={buttonClick} />
+            <h1 className="gamelist">{title}</h1>
+            {location.pathname === '/' && (
+                <Button
+                    text={showAdd ? 'PANELİ KAPAT' : 'OYUN EKLE'}
+                    color={showAdd ? '#c82424' : '#000'}
+                    click={onAdd}
+                />
+            )}
         </header>
     );
 };
 
 // Defaul props
 Header.defaultProps = {
-    game: 'League of Legends',
+    title: 'Oyun Listesi',
 };
 
 // Props type control
 Header.propTypes = {
-    game: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
 };
 
 export default Header;

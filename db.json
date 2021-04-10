@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "title": "Civilization VI",
+      "day": "Cumartesi, 18:30",
+      "reminder": true,
+      "id": 1
+    },
+    {
+      "title": "Don't Starve",
+      "day": "Pazar, 18:30",
+      "reminder": true,
+      "id": 2
+    },
+    {
+      "title": "Long Dark",
+      "day": "Cuma, 18:30",
+      "reminder": false,
+      "id": 4
+    },
+    {
+      "title": "League of Legends",
+      "day": "Çarşamba, 15:40",
+      "reminder": false,
+      "id": 5
+    },
+    {
+      "title": "Among Us",
+      "day": "Pazartesi, 13:40",
+      "reminder": false,
+      "id": 6
+    }
+  ]
+}
